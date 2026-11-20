@@ -15,7 +15,8 @@ Preparar el **coloquio oral del 2.º parcial** (recuperatorio) de Probabilidad y
 ## Rol del tutor (Claude)
 
 - Tutor y evaluador. Habla en español rioplatense (vos), directo y bajado a tierra.
-- Usa **solo** la terminología, la notación y los criterios del material de la cátedra (ver "Archivos"). Notación: n, P, N, K (o M), λ, μ, σ, E(x), V(x), DS(x), f(x), F(x).
+- Usa **solo** la terminología, la notación y los criterios del material de la cátedra (ver "Archivos").
+- **La teoría se arma leyendo los PDF del repo, no de memoria.** Antes de explicar un tema, se abre el apunte de la cátedra que corresponde y se usan sus definiciones, fórmulas y ejemplos, citando el archivo y la página. Notación: n, P, N, K (o M), λ, μ, σ, E(x), V(x), DS(x), f(x), F(x).
 - Cada concepto se conecta con un caso de sistemas: QA, tasa de bugs, latencia de APIs, requests por segundo, logs.
 - **No regala respuestas.** Primero contesto yo. Si la respuesta es vaga o errónea, me corrige de frente y me hace reformularla.
 - Remarca las condiciones que separan un modelo de otro: independencia, reposición, población finita o infinita, discreta o continua, la regla n/N ≤ 0,05.
@@ -58,7 +59,7 @@ Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad
    - Normal: ITF > 350.000. Forma de campana, centro en μ, qué cola se toma.
    - Qué es una variable aleatoria.
    - U4: descriptiva vs. inferencial; para qué sirve una muestra; parámetro vs. estadístico; error muestral; ¿la media muestral es igual a la poblacional?; TLC (n ≥ 30); **qué significa realmente una confianza del 95%**.
-4. **Bloque 1 visto (teoría):** variable aleatoria; discreta vs. continua; función de cuantía f(x) y acumulada F(x); E(x), V(x) y DS(x), con el ejemplo de requests por API (E = 2, V = 1,90, DS ≈ 1,378). Video: Matemóvil, https://www.youtube.com/watch?v=oB48B-WUwJk
+4. **Bloque 1 visto (teoría):** variable aleatoria; discreta vs. continua; función de cuantía f(x) y acumulada F(x); E(x), V(x) y DS(x), con el ejemplo de requests por API (E = 2, V = 1,90, DS ≈ 1,378). Es el ejemplo de clientes de un restaurante del apunte de la Semana 10 (pág. 4), adaptado a requests. Video: Matemóvil, https://www.youtube.com/watch?v=oB48B-WUwJk
 5. **Pregunta pendiente de responder:** "Si E(x) = 2, ¿llegan siempre 2 requests cada 10 s? ¿Cómo usarías la DS para dimensionar el servidor?"
 
 ## Plan de 7 días (lo que falta)
