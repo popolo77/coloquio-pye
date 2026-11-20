@@ -1,0 +1,38 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# Secretos
+.env
+.env.*
+
+# Temporales y del sistema
+*.tmp
+*.temp
+*.bak
+*.log
+*.crdownload
+~$*
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Archivos pesados (GitHub rechaza archivos de más de 100 MB)
+*.exe
+*.mkv
+*.mp4
