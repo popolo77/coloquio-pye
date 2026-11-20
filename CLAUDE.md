@@ -42,7 +42,8 @@ Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad
 - **Al empezar:** hacer `git pull` (o clonar el repo si la sesión es nueva), leer este archivo y retomar desde "Próximo paso concreto".
 - **Al cerrar** (cuando digo "cerramos" o al terminar un bloque importante):
   1. Actualizar "Lo que hicimos", la tabla del plan, la pregunta pendiente y el "Próximo paso concreto".
-  2. Hacer commit y push a `main`. Si no se puede pushear a `main`, subirlo a una rama y avisarme para que la mergee.
+  2. Actualizar la **bitácora del día** en `Coloquio/sesiones/AAAA-MM-DD.md`: la teoría completa que vimos (tablas, ejemplos y código), el video, la pregunta de cierre, **mi respuesta** y la corrección. La bitácora guarda el contenido; el CLAUDE.md, solo el resumen.
+  3. Hacer commit y push a `main`. Si no se puede pushear a `main`, subirlo a una rama y avisarme para que la mergee.
 - En mi PC local: correr `git pull` antes de estudiar y `git push` si cambié algo.
 
 ## Lo que hicimos en la sesión del 20/11/2026
@@ -95,6 +96,7 @@ Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad
 | `ejercicios/` | Guías y actividades entregadas (incluida la Actividad Obligatoria U3) |
 | `apuntes/` | Apuntes de las Unidades 1 y 2, Devore y Walpole |
 | `Coloquio/Notebook/` | Documento de síntesis de VA y distribuciones |
+| `Coloquio/sesiones/` | Bitácora por día: teoría vista, videos, preguntas, mis respuestas y correcciones |
 | `Practicas en R/` | Scripts de práctica en R |
 
 Estos archivos **no están en Git** (`.gitignore`): `RStudio-*.exe` (473 MB, supera el límite de GitHub), las grabaciones `.mkv` y los archivos de sesión de R.
