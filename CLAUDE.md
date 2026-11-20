@@ -30,10 +30,20 @@ Preparar el **coloquio oral del 2.º parcial** (recuperatorio) de Probabilidad y
 - **Listas y tablas**, no paredes de texto.
 - **Soy visual:** cada concepto con un gráfico o diagrama (si se puede, interactivo).
 - Un bloque corto por mensaje. Se espera mi confirmación antes de avanzar.
-- Cuando pido teoría, el formato es este:
-  1. Resumen teórico con la estructura del Profe Alex: idea simple, cómo se escribe, ejemplo paso a paso y "ojo con...".
-  2. Un video de YouTube del **Profe Alex** (canal "Matemáticas profe Alex"). Si no tiene video del tema, el más parecido en estilo (por ejemplo, **Matemóvil**), avisándome.
-  3. Una pregunta de cierre.
+- **Orden fijo de cada tema nuevo (siempre, en cualquier PC o sesión): teoría → video → pregunta.**
+  1. **Teoría primero:** resumen con la estructura del Profe Alex: idea simple, cómo se escribe, ejemplo paso a paso y "ojo con...".
+  2. **Después el video:** uno de YouTube del **Profe Alex** (canal "Matemáticas profe Alex"), que es mi preferido. Si no tiene video del tema, el más parecido en estilo (por ejemplo, **Matemóvil**), avisándome que no es del Profe Alex.
+  3. **Al final, la pregunta de cierre.** La contesto yo antes de pasar al tema siguiente.
+
+## Rutina de sesión (estudio en 2 PC: casa y laburo)
+
+Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad sobre dónde quedamos.
+
+- **Al empezar:** hacer `git pull` (o clonar el repo si la sesión es nueva), leer este archivo y retomar desde "Próximo paso concreto".
+- **Al cerrar** (cuando digo "cerramos" o al terminar un bloque importante):
+  1. Actualizar "Lo que hicimos", la tabla del plan, la pregunta pendiente y el "Próximo paso concreto".
+  2. Hacer commit y push a `main`. Si no se puede pushear a `main`, subirlo a una rama y avisarme para que la mergee.
+- En mi PC local: correr `git pull` antes de estudiar y `git push` si cambié algo.
 
 ## Lo que hicimos en la sesión del 20/11/2026
 
