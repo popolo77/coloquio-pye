@@ -27,6 +27,7 @@
 | 20/11 | Programa, descarga del material del aula, preguntas de WhatsApp, teoría del Bloque 1 (VA, E, V, DS) | La teoría quedó muy densa; no respondí la pregunta de cierre |
 | 22/11 | Plan de 5 días; temario oficial (sección 16 del aula); 18 videos de la cátedra; preguntas nuevas del grupo; estilo de Daniela | Decidimos empezar desde cero con el video de la cátedra |
 | 22/11 | Sync automático con GitHub (hooks); volvimos a la versión de esta PC; **Biblia del coloquio** armada con los PDF de las U3 y U4, el TAI y las preguntas reales | Lista para estudiar por capítulos |
+| 22/11 | Día 1: vi el video de la S10 y expliqué VA, discreta/continua y tabla | Bien en general. A corregir: dije "asigna un valor **aleatorio**" (lo aleatorio es el resultado, el número asignado es fijo) y usé "enteros/decimales" o "infinitos" como criterio (el criterio es **cuenta vs. mide**; Poisson es discreta e infinita). Pendiente: reformular la definición de VA |
 
 ## Objetivo
 
