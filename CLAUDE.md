@@ -11,6 +11,8 @@
 7. **Antes de dar un ejercicio, verificar si el video que vi lo cubre** (transcripción de YouTube). Videos ya revisados:
    - S10 video 1 ([widHBL3nnB8](https://youtu.be/widHBL3nnB8), 14 min, **ya lo vi**): VA, discreta/continua, función de probabilidad o cuantía, E(x), V(x), DS(x). **No cubre** la acumulada F(x) ni "menos de / a lo sumo" (eso está en el apunte S10, pág. 3).
    - S10 video 2 ([QOTy-gSDg18](https://youtu.be/QOTy-gSDg18), 29 min, **sin ver**): modelo Binomial.
+   - S11 Binomial ([ntMW0p_vPr8](https://youtu.be/ntMW0p_vPr8), 26 min): **ver 0:00 a 6:50** (qué es el éxito, X, muestreo sin reposición con menos del 5% → pruebas independientes). Desde 6:50 son cálculos: se saltea.
+   - S11 Hipergeométrico ([olCQZs68oAQ](https://youtu.be/olCQZs68oAQ), 17 min): **ver 0:00 a 9:00** (sin reposición modifica las probabilidades, parámetros N, K y n, rango de X de 0 a K, no siempre de 0 a n). Desde 9:00 son cálculos: se saltea.
 8. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
 
 ## 📍 Dónde quedamos (actualizar siempre)
