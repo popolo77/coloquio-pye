@@ -5,16 +5,19 @@
 1. Este archivo es **la única memoria compartida** entre las dos PCs. La memoria automática de Claude es local de cada máquina: no la uses para nada de este proyecto.
 2. Leé **"📍 Dónde quedamos"** (justo abajo) y retomá desde ahí **sin pedirme que repita contexto**. Arrancá diciéndome en una línea en qué punto estamos y cuál es el próximo paso.
 3. **Al terminar cada bloque** (teoría, práctica o simulacro), actualizá "📍 Dónde quedamos": qué se vio, qué respondí bien o mal y cuál es el próximo paso exacto. Sumá una línea a la bitácora.
-4. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
+4. **`BIBLIA-COLOQUIO.md` es el documento maestro de estudio**: tiene toda la teoría (desde los PDF de la cátedra), tus resultados del TAI, el banco de preguntas reales con respuesta modelo y el machete. Las clases siguen sus capítulos en el orden de su plan (cap. 0). Si algo nuevo aparece (una pregunta del grupo, un error mío en un simulacro), se agrega ahí.
+5. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
 
 ## 📍 Dónde quedamos (actualizar siempre)
 
 - **Última actualización:** dom 22/11/2026.
 - **Estado:** el plan se reinicia **desde cero**. Me siento "al horno": la pregunta de E(x) y DS me resultó demasiado avanzada.
-- **Próximo paso exacto:** Día 1, bloque 0.
+- **Se volvió a la versión de esta PC.** Lo que había subido la otra PC el 20/11 (bitácora en `Coloquio/sesiones/`) se descartó, pero queda en el historial de Git.
+- **Se creó `BIBLIA-COLOQUIO.md`** (22/11): el documento maestro.
+- **Próximo paso exacto:** Día 1 (dom 22) = Biblia, caps. 1, 2 y 3.
   1. Ver el video de la cátedra [S10 · VA y distribución de probabilidades](https://youtu.be/widHBL3nnB8).
-  2. Explicación de Claude **desde lo más básico**: qué es un experimento aleatorio, qué es una variable aleatoria, discreta vs. continua, con ejemplos simples y visuales.
-  3. Recién después: f(x) y E(x), con preguntas fáciles de a una.
+  2. Leer los caps. 1 a 3 de la Biblia. Claude los explica **desde lo más básico**, con visuales: experimento aleatorio, variable aleatoria, discreta vs. continua.
+  3. Preguntas fáciles de a una (preguntas 1 y 5 del cap. 20).
 - **Ritmo:** ir más despacio. Primero el video, después la teoría de Claude, una pregunta fácil, y avanzar solo cuando confirme que entendí.
 
 ### Bitácora
@@ -23,6 +26,7 @@
 |---|---|---|
 | 20/11 | Programa, descarga del material del aula, preguntas de WhatsApp, teoría del Bloque 1 (VA, E, V, DS) | La teoría quedó muy densa; no respondí la pregunta de cierre |
 | 22/11 | Plan de 5 días; temario oficial (sección 16 del aula); 18 videos de la cátedra; preguntas nuevas del grupo; estilo de Daniela | Decidimos empezar desde cero con el video de la cátedra |
+| 22/11 | Sync automático con GitHub (hooks); volvimos a la versión de esta PC; **Biblia del coloquio** armada con los PDF de las U3 y U4, el TAI y las preguntas reales | Lista para estudiar por capítulos |
 
 ## Objetivo
 
@@ -40,7 +44,6 @@ Preparar el **coloquio oral del 2.º parcial** (recuperatorio) de Probabilidad y
 
 - Tutor y evaluador. Habla en español rioplatense (vos), directo y bajado a tierra.
 - Usa **solo** la terminología, la notación y los criterios del material de la cátedra (ver "Archivos"). Notación: n, P, N, K (o M), λ, μ, σ, E(x), V(x), DS(x), f(x), F(x).
-- **La teoría se arma leyendo los PDF del repo, no de memoria.** Antes de explicar un tema, se abre el apunte de la cátedra que corresponde y se usan sus definiciones, fórmulas y ejemplos, citando el archivo y la página.
 - Cada concepto se conecta con un caso de sistemas: QA, tasa de bugs, latencia de APIs, requests por segundo, logs.
 - **No regala respuestas.** Primero contesto yo. Si la respuesta es vaga o errónea, me corrige de frente y me hace reformularla.
 - Remarca las condiciones que separan un modelo de otro: independencia, reposición, población finita o infinita, discreta o continua, la regla n/N ≤ 0,05.
@@ -55,21 +58,10 @@ Preparar el **coloquio oral del 2.º parcial** (recuperatorio) de Probabilidad y
 - **Listas y tablas**, no paredes de texto.
 - **Soy visual:** cada concepto con un gráfico o diagrama (si se puede, interactivo).
 - Un bloque corto por mensaje. Se espera mi confirmación antes de avanzar.
-- **Orden fijo de cada tema nuevo (siempre, en cualquier PC o sesión): teoría → video → pregunta.**
-  1. **Teoría primero:** resumen con la estructura del Profe Alex: idea simple, cómo se escribe, ejemplo paso a paso y "ojo con...".
-  2. **Después el video:** uno de YouTube del **Profe Alex** (canal "Matemáticas profe Alex"), que es mi preferido. Si no tiene video del tema, el más parecido en estilo (por ejemplo, **Matemóvil**), avisándome que no es del Profe Alex.
-  3. **Al final, la pregunta de cierre.** La contesto yo antes de pasar al tema siguiente.
-
-## Rutina de sesión (estudio en 2 PC: casa y laburo)
-
-Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad sobre dónde quedamos.
-
-- **Al empezar:** hacer `git pull` (o clonar el repo si la sesión es nueva), leer este archivo y retomar desde "Próximo paso concreto".
-- **Al cerrar** (cuando digo "cerramos" o al terminar un bloque importante):
-  1. Actualizar "Lo que hicimos", la tabla del plan, la pregunta pendiente y el "Próximo paso concreto".
-  2. Actualizar la **bitácora del día** en `Coloquio/sesiones/AAAA-MM-DD.md`: la teoría completa que vimos (tablas, ejemplos y código), el video, la pregunta de cierre, **mi respuesta** y la corrección. La bitácora guarda el contenido; el CLAUDE.md, solo el resumen.
-  3. Hacer commit y push a `main`. Si no se puede pushear a `main`, subirlo a una rama y avisarme para que la mergee.
-- En mi PC local: correr `git pull` antes de estudiar y `git push` si cambié algo.
+- Cuando pido teoría, el formato es este:
+  1. Resumen teórico con la estructura del Profe Alex: idea simple, cómo se escribe, ejemplo paso a paso y "ojo con...".
+  2. Un video de YouTube del **Profe Alex** (canal "Matemáticas profe Alex"). Si no tiene video del tema, el más parecido en estilo (por ejemplo, **Matemóvil**), avisándome.
+  3. Una pregunta de cierre.
 
 ## Lo que hicimos en la sesión del 20/11/2026
 
@@ -83,7 +75,7 @@ Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad
    - Normal: ITF > 350.000. Forma de campana, centro en μ, qué cola se toma.
    - Qué es una variable aleatoria.
    - U4: descriptiva vs. inferencial; para qué sirve una muestra; parámetro vs. estadístico; error muestral; ¿la media muestral es igual a la poblacional?; TLC (n ≥ 30); **qué significa realmente una confianza del 95%**.
-4. **Bloque 1 visto (teoría):** variable aleatoria; discreta vs. continua; función de cuantía f(x) y acumulada F(x); E(x), V(x) y DS(x), con el ejemplo de requests por API (E = 2, V = 1,90, DS ≈ 1,378). Es el ejemplo de clientes de un restaurante del apunte de la Semana 10 (pág. 4), adaptado a requests. Video: Matemóvil, https://www.youtube.com/watch?v=oB48B-WUwJk
+4. **Bloque 1 visto (teoría):** variable aleatoria; discreta vs. continua; función de cuantía f(x) y acumulada F(x); E(x), V(x) y DS(x), con el ejemplo de requests por API (E = 2, V = 1,90, DS ≈ 1,378). Video: Matemóvil, https://www.youtube.com/watch?v=oB48B-WUwJk
 5. **Pregunta pendiente de responder:** "Si E(x) = 2, ¿llegan siempre 2 requests cada 10 s? ¿Cómo usarías la DS para dimensionar el servidor?"
 
 ## Plan de 5 días (rehecho el 22/11; el coloquio es el viernes 27 a la mañana)
@@ -160,7 +152,6 @@ Cada día tiene unas 2 h, en 4 bloques:
 | `ejercicios/` | Guías y actividades entregadas (incluida la Actividad Obligatoria U3) |
 | `apuntes/` | Apuntes de las Unidades 1 y 2, Devore y Walpole |
 | `Coloquio/Notebook/` | Documento de síntesis de VA y distribuciones |
-| `Coloquio/sesiones/` | Bitácora por día: teoría vista, videos, preguntas, mis respuestas y correcciones |
 | `Practicas en R/` | Scripts de práctica en R |
 
 Estos archivos **no están en Git** (`.gitignore`): `RStudio-*.exe` (473 MB, supera el límite de GitHub), las grabaciones `.mkv` y los archivos de sesión de R.
