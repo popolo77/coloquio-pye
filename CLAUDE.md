@@ -7,7 +7,8 @@
 3. **Al terminar cada bloque** (teoría, práctica o simulacro), actualizá "📍 Dónde quedamos": qué se vio, qué respondí bien o mal y cuál es el próximo paso exacto. Sumá una línea a la bitácora.
 4. **`BIBLIA-COLOQUIO.md` es el documento maestro de estudio**: tiene toda la teoría (desde los PDF de la cátedra), tus resultados del TAI, el banco de preguntas reales con respuesta modelo y el machete. Las clases siguen sus capítulos en el orden de su plan (cap. 0). Si algo nuevo aparece (una pregunta del grupo, un error mío en un simulacro), se agrega ahí.
 5. **Ejercicios: SIEMPRE del aula de la UTN**, nunca inventados. Después de cada concepto corto viene un ejercicio breve, citando su origen (guía y número). Fuentes, en orden: `ejercicios/SEMANA 10 -Práctico-Var Aleat-Bipuntual-Binomial.pdf` (ej. 1-4: E, V, DS; ej. 5: f y F; ej. 6-9: Bipuntual y Binomial), `SEMANA 11 - Ejercitación - Modelos Hipergeométrico y Poisson.pdf`, los repasos `Unidades 3 y 4 - Aula/U3 - S15 Repaso/` y los cuestionarios autocorregibles del aula (S10 a S14, que el usuario puede hacer en tup.sied.utn.edu.ar). Las guías de Drive de las S10 y S12 todavía no están descargadas.
-6. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
+6. **Método (pedido el 22/11): video de la cátedra → ejercicio de la UTN directo → explicar SOLO lo que falle.** No repetir en texto lo que el video ya explicó. Si respondo bien, se avanza rápido.
+7. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
 
 ## 📍 Dónde quedamos (actualizar siempre)
 
