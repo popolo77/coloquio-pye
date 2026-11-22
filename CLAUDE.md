@@ -7,7 +7,7 @@
 3. **Al terminar cada bloque** (teoría, práctica o simulacro), actualizá "📍 Dónde quedamos": qué se vio, qué respondí bien o mal y cuál es el próximo paso exacto. Sumá una línea a la bitácora.
 4. **`BIBLIA-COLOQUIO.md` es el documento maestro de estudio**: tiene toda la teoría (desde los PDF de la cátedra), tus resultados del TAI, el banco de preguntas reales con respuesta modelo y el machete. Las clases siguen sus capítulos en el orden de su plan (cap. 0). Si algo nuevo aparece (una pregunta del grupo, un error mío en un simulacro), se agrega ahí.
 5. **Ejercicios: SIEMPRE del aula de la UTN**, nunca inventados. Después de cada concepto corto viene un ejercicio breve, citando su origen (guía y número). Fuentes, en orden: `ejercicios/SEMANA 10 -Práctico-Var Aleat-Bipuntual-Binomial.pdf` (ej. 1-4: E, V, DS; ej. 5: f y F; ej. 6-9: Bipuntual y Binomial), `SEMANA 11 - Ejercitación - Modelos Hipergeométrico y Poisson.pdf`, los repasos `Unidades 3 y 4 - Aula/U3 - S15 Repaso/` y los cuestionarios autocorregibles del aula (S10 a S14, que el usuario puede hacer en tup.sied.utn.edu.ar). Las guías de Drive de las S10 y S12 todavía no están descargadas.
-6. **Método (pedido el 22/11): video de la cátedra → ejercicio de la UTN directo → explicar SOLO lo que falle.** No repetir en texto lo que el video ya explicó. Si respondo bien, se avanza rápido.
+6. **Método "piloteo" (pedido el 22/11, ES LA PRIORIDAD): conciso y práctico.** Cada día: 🎥 un video de la cátedra → 🎯 3 o 4 ideas clave → 🗣️ 3 preguntas tipo coloquio (como Daniela) → ✏️ un caso de la cátedra **solo para identificar el modelo y los parámetros, SIN cálculos**. No repetir lo que el video explicó; explicar solo lo que falle. **No practicar cuentas** (E, V, DS, probabilidades, R): en el coloquio no se piden. Plan de piloteo: dom = Binomial vs. Hipergeométrica · lun = Poisson y Normal · mar = inferencia, sesgo, parámetro/estadístico · mié = TLC, IC 95% y consigna 8 · jue = 2 simulacros · vie = machete.
 7. **Antes de dar un ejercicio, verificar si el video que vi lo cubre** (transcripción de YouTube). Videos ya revisados:
    - S10 video 1 ([widHBL3nnB8](https://youtu.be/widHBL3nnB8), 14 min, **ya lo vi**): VA, discreta/continua, función de probabilidad o cuantía, E(x), V(x), DS(x). **No cubre** la acumulada F(x) ni "menos de / a lo sumo" (eso está en el apunte S10, pág. 3).
    - S10 video 2 ([QOTy-gSDg18](https://youtu.be/QOTy-gSDg18), 29 min, **sin ver**): modelo Binomial.
@@ -19,7 +19,8 @@
 - **Estado:** el plan se reinicia **desde cero**. Me siento "al horno": la pregunta de E(x) y DS me resultó demasiado avanzada.
 - **Se volvió a la versión de esta PC.** Lo que había subido la otra PC el 20/11 (bitácora en `Coloquio/sesiones/`) se descartó, pero queda en el historial de Git.
 - **Se creó `BIBLIA-COLOQUIO.md`** (22/11): el documento maestro.
-- **Próximo paso exacto:** Día 1 (dom 22) = Biblia, caps. 1, 2 y 3.
+- **Próximo paso exacto (actualizado):** ver la última fila de la bitácora. Hoy (dom 22): videos [Binomial S11](https://youtu.be/ntMW0p_vPr8) y [Hipergeométrico S11](https://youtu.be/olCQZs68oAQ), y después 3 preguntas tipo Daniela.
+- *(Plan anterior, reemplazado por el método piloteo:)* Día 1 = Biblia, caps. 1, 2 y 3.
   1. Ver el video de la cátedra [S10 · VA y distribución de probabilidades](https://youtu.be/widHBL3nnB8).
   2. Leer los caps. 1 a 3 de la Biblia. Claude los explica **desde lo más básico**, con visuales: experimento aleatorio, variable aleatoria, discreta vs. continua.
   3. Preguntas fáciles de a una (preguntas 1 y 5 del cap. 20).
@@ -33,6 +34,7 @@
 | 22/11 | Plan de 5 días; temario oficial (sección 16 del aula); 18 videos de la cátedra; preguntas nuevas del grupo; estilo de Daniela | Decidimos empezar desde cero con el video de la cátedra |
 | 22/11 | Sync automático con GitHub (hooks); volvimos a la versión de esta PC; **Biblia del coloquio** armada con los PDF de las U3 y U4, el TAI y las preguntas reales | Lista para estudiar por capítulos |
 | 22/11 | Día 1: vi el video de la S10 y expliqué VA, discreta/continua y tabla | Bien en general. A corregir: dije "asigna un valor **aleatorio**" (lo aleatorio es el resultado, el número asignado es fijo) y usé "enteros/decimales" o "infinitos" como criterio (el criterio es **cuenta vs. mide**; Poisson es discreta e infinita). Pendiente: reformular la definición de VA |
+| 22/11 | Pasamos al método "piloteo" (sin cálculos, solo lo que preguntan). Tarea: videos Binomial y Hipergeométrico de la S11 | Próximo: cuando diga "listo", 3 preguntas tipo Daniela sobre Binomial vs. Hipergeométrica |
 | 22/11 | Reformulé la definición de VA con el ejemplo de los 2 tests | ✅ Entendido al segundo intento: lo aleatorio es el resultado, lo fijo es la regla de X. Discreta porque cuenta ✅. Próximo: f(x), F(x) y E(x) con el mismo ejemplo |
 
 ## Objetivo
