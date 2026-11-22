@@ -1,5 +1,29 @@
 # Coloquio de Probabilidad y Estadística (TUPaD, UTN)
 
+## ⚠️ Instrucciones para Claude al empezar cada sesión (en cualquier PC)
+
+1. Este archivo es **la única memoria compartida** entre las dos PCs. La memoria automática de Claude es local de cada máquina: no la uses para nada de este proyecto.
+2. Leé **"📍 Dónde quedamos"** (justo abajo) y retomá desde ahí **sin pedirme que repita contexto**. Arrancá diciéndome en una línea en qué punto estamos y cuál es el próximo paso.
+3. **Al terminar cada bloque** (teoría, práctica o simulacro), actualizá "📍 Dónde quedamos": qué se vio, qué respondí bien o mal y cuál es el próximo paso exacto. Sumá una línea a la bitácora.
+4. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
+
+## 📍 Dónde quedamos (actualizar siempre)
+
+- **Última actualización:** dom 22/11/2026.
+- **Estado:** el plan se reinicia **desde cero**. Me siento "al horno": la pregunta de E(x) y DS me resultó demasiado avanzada.
+- **Próximo paso exacto:** Día 1, bloque 0.
+  1. Ver el video de la cátedra [S10 · VA y distribución de probabilidades](https://youtu.be/widHBL3nnB8).
+  2. Explicación de Claude **desde lo más básico**: qué es un experimento aleatorio, qué es una variable aleatoria, discreta vs. continua, con ejemplos simples y visuales.
+  3. Recién después: f(x) y E(x), con preguntas fáciles de a una.
+- **Ritmo:** ir más despacio. Primero el video, después la teoría de Claude, una pregunta fácil, y avanzar solo cuando confirme que entendí.
+
+### Bitácora
+
+| Fecha | Qué hicimos | Resultado |
+|---|---|---|
+| 20/11 | Programa, descarga del material del aula, preguntas de WhatsApp, teoría del Bloque 1 (VA, E, V, DS) | La teoría quedó muy densa; no respondí la pregunta de cierre |
+| 22/11 | Plan de 5 días; temario oficial (sección 16 del aula); 18 videos de la cátedra; preguntas nuevas del grupo; estilo de Daniela | Decidimos empezar desde cero con el video de la cátedra |
+
 ## Objetivo
 
 Preparar el **coloquio oral del 2.º parcial** (recuperatorio) de Probabilidad y Estadística, de la Tecnicatura Universitaria en Programación a Distancia (UTN).
@@ -62,20 +86,59 @@ Este CLAUDE.md es la memoria compartida entre las dos PC. Es la fuente de verdad
 4. **Bloque 1 visto (teoría):** variable aleatoria; discreta vs. continua; función de cuantía f(x) y acumulada F(x); E(x), V(x) y DS(x), con el ejemplo de requests por API (E = 2, V = 1,90, DS ≈ 1,378). Es el ejemplo de clientes de un restaurante del apunte de la Semana 10 (pág. 4), adaptado a requests. Video: Matemóvil, https://www.youtube.com/watch?v=oB48B-WUwJk
 5. **Pregunta pendiente de responder:** "Si E(x) = 2, ¿llegan siempre 2 requests cada 10 s? ¿Cómo usarías la DS para dimensionar el servidor?"
 
-## Plan de 7 días (lo que falta)
+## Plan de 5 días (rehecho el 22/11; el coloquio es el viernes 27 a la mañana)
 
-| Día | Tema | Estado |
-|---|---|---|
-| 20/11 | VA, distribución, E(x), V(x), DS(x) y mapa "¿qué modelo uso?" | Teoría vista; falta responder la pregunta de cierre |
-| 21/11 | Binomial vs. Hipergeométrica: parámetros, rango de X, regla del 5% (consigna 5 del TAI) | Pendiente |
-| 22/11 | Poisson (reescalar λ, consigna 7) y Normal (forma, μ, σ, colas, consigna 6) | Pendiente |
-| 23/11 | U4: población/muestra, parámetro vs. estadístico, descriptiva vs. inferencial, tipos de muestreo | Pendiente |
-| 24/11 | Error muestral, distribución muestral, error estándar, TLC | Pendiente |
-| 25/11 | Intervalos de confianza: qué significa el 95% (y la consigna 8 del TAI) | Pendiente |
-| 26/11 | Dos simulacros orales completos | Pendiente |
-| 27/11 | Repaso de 20 minutos y coloquio | — |
+Cada día tiene unas 2 h, en 4 bloques:
 
-**Próximo paso concreto:** responder la pregunta de cierre del Bloque 1 y después pasar a Binomial vs. Hipergeométrica, con video del Profe Alex.
+1. **Calentamiento (10 min):** explicar en voz alta el tema del día anterior, sin mirar.
+2. **Teoría (40 min):** resumen, video y pregunta de cierre.
+3. **Práctica (40 min):** un caso del TAI. Identifico modelo, parámetros y qué significa el resultado.
+4. **Defensa oral (20 min):** Claude hace de profesor con las preguntas reales que les hicieron a los compañeros.
+
+| Día | Temas | Preguntas reales que tengo que poder defender | Estado |
+|---|---|---|---|
+| **Dom 22** | Cerrar el Bloque 1 (VA, E(x), DS). Mapa "¿qué modelo uso?". Binomial vs. Hipergeométrica (n/N ≤ 0,05, N, K, n, rango de X) | "300 hogares, tomo 20, propietarios: ¿qué modelo?" · ¿Qué es una VA? · ¿Por qué los fracasos son N − K? | Pendiente |
+| **Lun 23** | Poisson (λ, reescalar el intervalo). Normal (campana, μ, σ, qué cola, estandarización Z). Consignas 6 y 7 del TAI | "12 formularios por hora, ¿cuántos en 15 min?" · "ITF > 350.000: ¿qué forma tiene, qué es el centro, qué lado tomo?" | Pendiente |
+| **Mar 24** | U4: descriptiva vs. inferencial, población y muestra, **criterios de notación** (μ/x̄, σ/s, N/n), parámetro vs. estadístico, muestreo aleatorio **simple y sistemático**, estimación puntual, **insesgadez y eficiencia** | "¿Este dato es parámetro o estadístico?" · "¿Para qué se usa una muestra?" · ¿Qué es un buen estimador? | Pendiente |
+| **Mié 25** | Error muestral, **distribución de la media muestral**, error estándar, TLC, Z de la media. **Intervalos de confianza para la media**: qué significa el 95%, qué pasa con el ancho si cambian n y la confianza. Consigna 8 del TAI | "¿La media muestral es igual a la poblacional?" · ¿Por qué n ≥ 30? · "¿95% de confianza significa 95% de probabilidad de acertar?" | Pendiente |
+| **Jue 26** | Dos simulacros orales completos (4 preguntas cada uno). Arreglar los puntos flojos. Armar el machete de una página con las frases clave | Todas, mezcladas | Pendiente |
+| **Vie 27** | 20 min con el machete y a rendir | — | — |
+
+### Temario oficial del 2.º parcial (aula, sección 16)
+
+- **U3:** Binomial, Hipergeométrica, Poisson y Normal. *(La Binomial Negativa no entra.)*
+- **U4:** muestreo probabilístico aleatorio simple y sistemático; población y muestra; criterios de notación; estimación puntual; insesgadez; eficiencia; TLC; distribución de la media muestral; estandarización Z; intervalos de confianza para la media.
+- **Formato:** unos 15 min por videollamada con el tutor o tutora (comisión de Daniela Isla Zuvialde). Conceptos, elección de procedimiento, interpretación y fundamentación, con vínculos al TAI. **No se evalúa R.** Hay que tener cámara y micrófono.
+- **Requisito:** consignas 5 a 8 del TAI aprobadas.
+
+### Mi tutora: Daniela (Isla Zuvialde)
+
+- Ya rendí el 1.er coloquio con ella y fue muy bien. **Busca que entienda el concepto y por qué lo aplico, no las fórmulas.**
+- Al 22/11 nadie del grupo había rendido el 2.º parcial con ella. Su estilo se estima por el de los otros tutores.
+
+### Preguntas nuevas del grupo (20/11)
+
+- **Patrón general:** 4 preguntas (2 de la U3 y 2 de la U4). En la U3 te dan **un caso y tenés que decir qué modelo usás, por qué, y cuáles son los parámetros y la variable**. En la U4 es más teoría.
+- Una tutora **compartió pantalla con un formulario de 10 preguntas y eligió 4 al azar**, "tipo los exámenes de las unidades". Los **cuestionarios autocorregibles del aula** (S10 a S14) son el mejor banco de preguntas para practicar.
+- Caso Hipergeométrico: leer el enunciado, elegir el modelo e **identificar parámetros y variable**. Caso Normal: lo mismo.
+- **Sesgo de muestreo:** "Se hace una encuesta a usuarios, pero se publica solo en un foro de expertos. ¿Cuál es el problema y cómo lo arreglarías?" (muestra no representativa, hace falta muestreo aleatorio).
+- "Con una muestra de 50 datos, ¿qué hace la estadística descriptiva y qué la inferencial?"
+- Normal: parámetros, en qué casos se usa, **estandarización (Z)**. Biondi pidió la fórmula de Z ("¿qué va en el denominador?").
+- **Consigna 8 del TAI:** qué pasa con las medias muestrales respecto de la poblacional, qué significa que algunas queden por encima y otras por debajo, y qué pasaría si coincidieran. A dos compañeros se les borró: **repasarla sí o sí.**
+- "En una app se registraron 300 clicks. ¿Qué podés decir o inferir?" Apuntaba a que un dato suelto no alcanza: hace falta definir la población y la unidad (clicks ≠ usuarios; con login identificás usuarios), el tamaño de muestra y el intervalo de tiempo.
+- Biondi: "¿Qué valores puede tomar X?" (rango de la variable en cada modelo).
+
+### Videos de la cátedra (verlos antes que YouTube)
+
+| Día | Video |
+|---|---|
+| Dom 22 | [S10 · VA y distribución de probabilidades](https://youtu.be/widHBL3nnB8) · [S10 · video 2](https://youtu.be/QOTy-gSDg18) · [S11 · Binomial](https://youtu.be/ntMW0p_vPr8) · [S11 · Hipergeométrico](https://youtu.be/olCQZs68oAQ) |
+| Lun 23 | [S11 · video 3 (Poisson)](https://youtu.be/nNhow4oKJsQ) · [S12 · Normal, video 1](https://youtu.be/b4udD8N2FYs) · [S12 · Normal, video 2](https://youtu.be/VgB9aFbR6a4) · [Ejercicio Normal](https://youtu.be/z3RYtIz4qQw) |
+| Mar 24 | [¿Qué es la inferencia estadística?](https://youtu.be/M7Q7E8no6SI) · [Estimadores](https://youtu.be/aVAoItA1ci8) |
+| Mié 25 | [Distribuciones muestrales](https://youtu.be/zem2oenVOAg) · [TLC](https://youtu.be/rIVRe9VQLJA) · [Construcción de IC](https://youtu.be/2kAuiMyKqns) · [Interpretación de IC](https://youtu.be/-x165C0nM3s) · [Tutorial consigna 8 del TAI](https://youtu.be/5nepICa3uH4) |
+| Opcional (R) | [Binomial en R](https://youtu.be/LIpue4wZqAI) · [Poisson en R](https://youtu.be/xGpZq7hEqew) · [Normal en R](https://youtu.be/NeMArVS2VGI) |
+
+**Próximo paso concreto:** ver "📍 Dónde quedamos" al principio de este archivo.
 
 ## Archivos y carpetas importantes
 
