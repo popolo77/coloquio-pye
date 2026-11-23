@@ -13,7 +13,8 @@
    - S10 video 2 ([QOTy-gSDg18](https://youtu.be/QOTy-gSDg18), 29 min, **sin ver**): modelo Binomial.
    - S11 Binomial ([ntMW0p_vPr8](https://youtu.be/ntMW0p_vPr8), 26 min): **ver 0:00 a 6:50** (qué es el éxito, X, muestreo sin reposición con menos del 5% → pruebas independientes). Desde 6:50 son cálculos: se saltea.
    - S11 Hipergeométrico ([olCQZs68oAQ](https://youtu.be/olCQZs68oAQ), 17 min): **ver 0:00 a 9:00** (sin reposición modifica las probabilidades, parámetros N, K y n, rango de X de 0 a K, no siempre de 0 a n). Desde 9:00 son cálculos: se saltea.
-8. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
+8. **PDF Maestro (pedido el 23/11): un PDF de resumen que se actualiza al CERRAR cada día.** Fuente: `Coloquio/PDF-Maestro/maestro.html`. Al cerrar un día se agrega su sección (teoría del día, frases para el coloquio, errores que cometí, videos con minutos) y se actualiza la tabla de estado del principio. Se regenera con: `& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="<carpeta>\PDF-Maestro-Coloquio.pdf" file:///<carpeta>/maestro.html` (en la otra PC, el mismo comando con la ruta de Edge o Chrome que tenga). Después del PDF: repaso → ejercicios del repaso de la cátedra en formato coloquio.
+9. Sincronización con GitHub: si existe `.claude/settings.json`, los hooks hacen `git pull` al abrir la sesión y commit y push al terminar cada respuesta. Si no existe, recordame correr `git pull` al empezar y `git add -A`, `git commit` y `git push` al terminar.
 
 ## 📍 Dónde quedamos (actualizar siempre)
 

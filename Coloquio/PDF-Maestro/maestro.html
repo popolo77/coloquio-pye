@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PDF Maestro: Coloquio PyE</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1f2328; --muted:#5b6270; --line:#d6d9de; --accent:#3c3489; --accent-bg:#eeedfe;
+          --ok:#0f6e56; --ok-bg:#e1f5ee; --warn:#854f0b; --warn-bg:#faeeda; --bad:#a32d2d; --bad-bg:#fcebeb; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.45; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 4px; color: var(--accent); }
+  h2 { font-size: 14pt; margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--accent); color: var(--accent); page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 12px 0 6px; page-break-after: avoid; }
+  p { margin: 4px 0 8px; }
+  .sub { color: var(--muted); margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; page-break-inside: avoid; font-size: 9.8pt; }
+  th, td { border: 1px solid var(--line); padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; }
+  .box { border-radius: 8px; padding: 8px 11px; margin: 8px 0 10px; page-break-inside: avoid; }
+  .say { background: var(--accent-bg); border-left: 4px solid var(--accent); }
+  .say::before { content: "🗣️ Para decir en el coloquio"; display:block; font-weight:600; color: var(--accent); margin-bottom: 3px; }
+  .key { background: var(--ok-bg); border-left: 4px solid var(--ok); }
+  .warn { background: var(--warn-bg); border-left: 4px solid var(--warn); }
+  .bad { background: var(--bad-bg); border-left: 4px solid var(--bad); }
+  code, pre { font-family: Consolas, monospace; font-size: 9.3pt; }
+  pre { background: #f6f8fa; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; white-space: pre-wrap; page-break-inside: avoid; }
+  .day { background: var(--accent); color: #fff; padding: 6px 12px; border-radius: 6px; font-size: 13pt; font-weight: 600; margin: 22px 0 4px; }
+  .pb { page-break-before: always; }
+  .toc td:first-child { width: 22%; font-weight: 600; }
+  .pill { display:inline-block; padding: 1px 8px; border-radius: 10px; font-size: 8.8pt; font-weight:600; }
+  .p-ok { background: var(--ok-bg); color: var(--ok); } .p-warn { background: var(--warn-bg); color: var(--warn); }
+  svg text { font-family: "Segoe UI", Arial, sans-serif; }
+  .foot { color: var(--muted); font-size: 8.8pt; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>📘 PDF Maestro: Coloquio de Probabilidad y Estadística</h1>
+<div class="sub">TUPaD · UTN · 2.º parcial (U3 y U4) · Coloquio: <b>viernes 27/11</b> con Daniela · Se actualiza al cerrar cada día</div>
+
+<table class="toc">
+  <tr><th>Día</th><th>Temas</th><th>Estado</th></tr>
+  <tr><td>Día 1</td><td>Variable aleatoria · discreta vs. continua · distribución · <b>Binomial</b> · <b>Hipergeométrica</b></td><td><span class="pill p-ok">✅ Completo</span></td></tr>
+  <tr><td>Día 2</td><td>Poisson (consigna 7) · Normal (consigna 6)</td><td><span class="pill p-warn">En curso</span></td></tr>
+  <tr><td>Día 3</td><td>Inferencia · muestra y sesgo · parámetro vs. estadístico · estimadores · muestreo</td><td>Pendiente</td></tr>
+  <tr><td>Día 4</td><td>Error muestral · TLC · intervalos de confianza (95%) · consigna 8</td><td>Pendiente</td></tr>
+  <tr><td>Día 5</td><td>Simulacros completos</td><td>Pendiente</td></tr>
+</table>
+
+<h2>🔑 La fórmula para responder cualquier pregunta</h2>
+<div class="box key"><b>1. QUÉ</b> es o qué modelo uso → <b>2. POR QUÉ</b> (las condiciones que lo justifican, con la cuenta si hay) → <b>3. QUÉ SIGNIFICA</b> (interpretación o decisión).<br>
+En la U3 casi siempre te leen <b>un caso</b> y tenés que decir: <b>X · éxito · modelo y por qué · parámetros</b>. <b>No piden cuentas.</b></div>
+
+<!-- ======================= DÍA 1 ======================= -->
+<div class="day">DÍA 1 · Variable aleatoria, Binomial e Hipergeométrica</div>
+<div class="sub">Fuentes: apunte de la cátedra S10 (págs. 1 a 5), resumen de modelos discretos S11, videos de la cátedra S10 (video 1), S11 Binomial (0:00 a 6:50) y S11 Hipergeométrico (0:00 a 9:00).</div>
+
+<h2>1. Variable aleatoria (VA)</h2>
+<p><b>Definición de la cátedra:</b> una variable aleatoria <b>representa numéricamente a cada posible resultado de un experimento aleatorio</b>. Es una <b>regla (función)</b> que le asigna un número a cada resultado.</p>
+
+<table>
+  <tr><th></th><th>¿Es aleatorio?</th><th>En el ejemplo de los 2 tests (X = tests que fallan)</th></tr>
+  <tr><td><b>Qué resultado sale</b></td><td>✅ <b>Sí</b></td><td>No sé si va a salir Falla·Falla, Falla·Pasa, Pasa·Falla o Pasa·Pasa</td></tr>
+  <tr><td><b>La regla de X</b></td><td>❌ <b>No, es fija</b></td><td>Falla·Falla → <b>siempre</b> 2 · Pasa·Pasa → <b>siempre</b> 0</td></tr>
+  <tr><td><b>El valor que termina tomando X</b></td><td>Se conoce recién cuando sale el resultado</td><td>Por eso se llama variable <i>aleatoria</i></td></tr>
+</table>
+
+<pre>def X(resultado):                  # la REGLA: fija, sin azar
+    return resultado.count("Falla")
+
+resultado = correr_los_2_tests()   # lo ALEATORIO es el input
+X(resultado)                       # por eso no sé de antemano cuánto vale X</pre>
+
+<div class="box say">"Una variable aleatoria es una regla que le asigna un número a cada resultado posible de un experimento. La regla es fija, pero el resultado que sale es aleatorio. Por eso, antes de hacer el experimento no sé cuánto va a valer X: solo sé qué valores puede tomar y con qué probabilidad."</div>
+
+<h2>2. Discreta vs. continua</h2>
+<table>
+  <tr><th></th><th>Discreta</th><th>Continua</th></tr>
+  <tr><td><b>Criterio seguro</b></td><td><b>CUENTA</b></td><td><b>MIDE</b></td></tr>
+  <tr><td>Valores</td><td>Aislados, con saltos: 0, 1, 2...</td><td>Cualquier valor de un intervalo, sin saltos</td></tr>
+  <tr><td>Ejemplos</td><td>Hogares inquilinos, tests que fallan, formularios por hora</td><td>ITF (ingreso), latencia en ms, tiempo de ejecución</td></tr>
+  <tr><td>Modelos</td><td>Binomial, Hipergeométrica, Poisson</td><td>Normal</td></tr>
+  <tr><td>P(valor exacto)</td><td>Puede ser mayor que 0: P(X = 4)</td><td><b>Siempre 0</b>: se calculan áreas</td></tr>
+</table>
+<div class="box warn"><b>⚠️ Criterios flojos (no usarlos solos):</b> "enteros vs. decimales" (la edad en años es continua aunque se redondee) e "infinitos valores" (<b>Poisson es discreta</b> y puede tomar infinitos valores: 0, 1, 2, 3...).</div>
+
+<h2>3. Distribución de probabilidad</h2>
+<p>Es una <b>tabla, gráfico o fórmula</b> con <b>todos los valores posibles de X</b> y <b>la probabilidad de cada uno</b>. Cada probabilidad está entre 0 y 1, y <b>todas suman 1</b>.</p>
+<table>
+  <tr><th>Símbolo</th><th>Nombre</th><th>Qué responde</th><th>Ejemplo de los 2 tests</th></tr>
+  <tr><td>f(x) = P(X = x)</td><td>Función de <b>cuantía</b></td><td>¿Probabilidad de <b>exactamente</b> x?</td><td>f(1) = 0,50</td></tr>
+  <tr><td>F(x) = P(X ≤ x)</td><td>Función <b>acumulada</b></td><td>¿Probabilidad de <b>como máximo</b> x? (se suman filas)</td><td>F(1) = 0,25 + 0,50 = 0,75</td></tr>
+  <tr><td>E(x)</td><td>Esperanza</td><td>Promedio <b>a largo plazo</b>, no "lo que va a pasar"</td><td>—</td></tr>
+  <tr><td>V(x), DS(x)</td><td>Varianza y desviación</td><td>Cuánto se dispersan los valores alrededor de E(x)</td><td>—</td></tr>
+</table>
+<p style="color:var(--muted)"><i>En el coloquio no se calculan. Basta con saber qué significa cada uno.</i></p>
+
+<h2>4. El mapa: ¿qué modelo uso?</h2>
+<svg viewBox="0 0 680 300" width="100%" style="page-break-inside:avoid">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#5b6270" stroke-width="1.5"/></marker></defs>
+  <g fill="none" stroke="#5b6270" stroke-width="1"><path d="M340 50 V68 H200 V84" marker-end="url(#a)"/><path d="M340 50 V68 H520 V84" marker-end="url(#a)"/><path d="M200 130 V148 H120 V164" marker-end="url(#a)"/><path d="M200 130 V148 H330 V164" marker-end="url(#a)"/><path d="M520 130 V164" marker-end="url(#a)"/><path d="M120 210 V226 H60 V240" marker-end="url(#a)"/><path d="M120 210 V226 H235 V240" marker-end="url(#a)"/></g>
+  <rect x="250" y="8" width="180" height="42" rx="7" fill="#f1efe8" stroke="#888780"/><text x="340" y="34" text-anchor="middle" font-size="13" font-weight="600">¿Qué hace X?</text>
+  <rect x="110" y="88" width="180" height="42" rx="7" fill="#f1efe8" stroke="#888780"/><text x="200" y="114" text-anchor="middle" font-size="12.5">CUENTA (discreta)</text>
+  <rect x="430" y="88" width="180" height="42" rx="7" fill="#f1efe8" stroke="#888780"/><text x="520" y="114" text-anchor="middle" font-size="12.5">MIDE (continua)</text>
+  <rect x="30" y="168" width="180" height="42" rx="7" fill="#f1efe8" stroke="#888780"/><text x="120" y="187" text-anchor="middle" font-size="11.5">Éxitos en n pruebas</text><text x="120" y="202" text-anchor="middle" font-size="10" fill="#5b6270">(éxito / fracaso)</text>
+  <rect x="245" y="168" width="170" height="42" rx="7" fill="#eeedfe" stroke="#534ab7"/><text x="330" y="187" text-anchor="middle" font-size="12" font-weight="600" fill="#3c3489">POISSON (λ)</text><text x="330" y="202" text-anchor="middle" font-size="10" fill="#3c3489">sucesos por intervalo</text>
+  <rect x="430" y="168" width="180" height="42" rx="7" fill="#e1f5ee" stroke="#0f6e56"/><text x="520" y="187" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">NORMAL (μ, σ)</text><text x="520" y="202" text-anchor="middle" font-size="10" fill="#085041">campana</text>
+  <rect x="0" y="244" width="140" height="52" rx="7" fill="#eeedfe" stroke="#534ab7"/><text x="70" y="264" text-anchor="middle" font-size="12" font-weight="600" fill="#3c3489">BINOMIAL (n, P)</text><text x="70" y="280" text-anchor="middle" font-size="9.5" fill="#3c3489">población grande</text><text x="70" y="292" text-anchor="middle" font-size="9.5" fill="#3c3489">o n/N ≤ 0,05</text>
+  <rect x="160" y="244" width="160" height="52" rx="7" fill="#eeedfe" stroke="#534ab7"/><text x="240" y="264" text-anchor="middle" font-size="12" font-weight="600" fill="#3c3489">HIPERGEOM. (N, K, n)</text><text x="240" y="280" text-anchor="middle" font-size="9.5" fill="#3c3489">lote chico, sin reposición</text><text x="240" y="292" text-anchor="middle" font-size="9.5" fill="#3c3489">n/N &gt; 0,05</text>
+</svg>
+
+<h2>5. Modelo Binomial</h2>
+<p><b>Idea:</b> repetís <b>n veces</b> una prueba con solo <b>dos resultados</b> (éxito o fracaso), siempre con la <b>misma probabilidad de éxito P</b>, y las pruebas son <b>independientes</b>. X cuenta <b>cuántos éxitos</b> hubo.</p>
+
+<h3>Éxito vs. X (no confundirlos)</h3>
+<table>
+  <tr><th></th><th>Se mira en...</th><th>Qué es</th><th>Valores</th></tr>
+  <tr><td><b>Éxito</b></td><td><b>Cada elemento, de a uno</b></td><td>La <b>característica que estudiás</b>, aunque sea algo malo ("bloque corrupto", "el 40% que NO hace click")</td><td>Sí o no (etiqueta)</td></tr>
+  <tr><td><b>X</b></td><td><b>Toda la muestra junta</b></td><td><b>Cuántos éxitos</b> hubo</td><td>Un número: de 0 a n</td></tr>
+</table>
+
+<h3>Cuándo se usa (criterio de la cátedra)</h3>
+<p>Población <b>infinita</b> · o muestreo <b>con reposición</b> · o <b>sin reposición con n/N ≤ 0,05</b>.</p>
+
+<h3>Parámetros: cómo sacarlos del enunciado</h3>
+<table>
+  <tr><th>Parámetro</th><th>Pregunta que responde</th><th>Truco</th></tr>
+  <tr><td><b>n</b></td><td>¿Cuántas pruebas hago? (tamaño de la muestra)</td><td>"Se examinan <b>25</b>..." → n = 25</td></tr>
+  <tr><td><b>P</b></td><td>¿Qué probabilidad tiene <b>cada</b> prueba de ser éxito?</td><td>"El <b>10%</b> se corrompe" → P = <b>0,10</b> (no "10")</td></tr>
+</table>
+
+<h3>¿Por qué son independientes? (la clave)</h3>
+<p>Independientes = <b>sacar un elemento no cambia la probabilidad del siguiente</b>. Mirá P después de sacar uno con la característica:</p>
+<table>
+  <tr><th>Población</th><th>Antes</th><th>Después de sacar 1 éxito</th><th>¿Cambió P?</th></tr>
+  <tr><td>Grande: 10.000 bloques, 1.000 corruptos</td><td>0,1000</td><td>999/9.999 = <b>0,0999</b></td><td>Casi nada → <b>Binomial</b></td></tr>
+  <tr><td>Chica: 30 bloques, 3 corruptos</td><td>0,1000</td><td>2/29 = <b>0,0690</b></td><td>¡Mucho! → <b>Hipergeométrica</b></td></tr>
+</table>
+
+<div class="box key"><b>🔑 Truco de la cátedra:</b> si te dan un <b>porcentaje</b> y <b>no te dicen el tamaño de la población</b>, la población es <b>muy grande</b> → la muestra es menos del 5% → P fija → <b>Binomial</b>. No hace falta calcular n/N: se <b>deduce</b>.</div>
+<div class="box bad"><b>❌ Error a vigilar:</b> <b>P NO se compara con el 5%.</b> La regla es siempre <b>n/N</b> (qué parte de la población saco). P puede valer cualquier cosa (0,05, 0,15, 0,40...) y la Binomial sigue valiendo.</div>
+
+<div class="box say">Caso del Data Lake (cuestionario 1 de repaso, pregunta 5: el 10% de los bloques se corrompe, se examinan 25): "X es la cantidad de bloques corruptos entre los 25 que examino. El éxito es que un bloque esté corrupto. Uso la Binomial porque no me dan el tamaño de la población, entonces es muy grande; la muestra es menos del 5% y la probabilidad de 0,10 se mantiene para cada bloque, así que las pruebas son independientes. Parámetros: n = 25 y P = 0,10."</div>
+
+<h2>6. Modelo Hipergeométrico ⭐ (el que más preguntan)</h2>
+<p><b>Idea:</b> tenés un <b>lote cerrado y chico</b>, sacás algunos elementos <b>sin devolverlos</b> y contás cuántos tienen la característica. <b>Cada uno que sacás cambia la probabilidad del siguiente</b>: las pruebas <b>no son independientes</b>.</p>
+
+<svg viewBox="0 0 680 150" width="100%" style="page-break-inside:avoid">
+  <defs><marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#5b6270" stroke-width="1.5"/></marker></defs>
+  <rect x="10" y="10" width="250" height="120" rx="10" fill="none" stroke="#888780" stroke-dasharray="4 3"/>
+  <text x="135" y="30" text-anchor="middle" font-size="12" font-weight="600">Población: N = 8 scripts</text>
+  <g fill="#f5c4b3" stroke="#993c1d"><rect x="25" y="42" width="44" height="32" rx="5"/><rect x="79" y="42" width="44" height="32" rx="5"/><rect x="133" y="42" width="44" height="32" rx="5"/></g>
+  <g fill="#e8e6df" stroke="#888780"><rect x="187" y="42" width="44" height="32" rx="5"/><rect x="25" y="82" width="44" height="32" rx="5"/><rect x="79" y="82" width="44" height="32" rx="5"/><rect x="133" y="82" width="44" height="32" rx="5"/><rect x="187" y="82" width="44" height="32" rx="5"/></g>
+  <text x="135" y="146" text-anchor="middle" font-size="10" fill="#5b6270">Coral: K = 3 con credenciales · Gris: N − K = 5 limpios</text>
+  <path d="M268 70 H318" stroke="#5b6270" marker-end="url(#b)"/><text x="293" y="62" text-anchor="middle" font-size="10" fill="#5b6270">saco 4</text>
+  <rect x="325" y="22" width="160" height="96" rx="10" fill="#eeedfe" stroke="#534ab7"/>
+  <text x="405" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#3c3489">Muestra: n = 4</text>
+  <text x="405" y="68" text-anchor="middle" font-size="10.5" fill="#3c3489">X = cuántos con credenciales</text>
+  <text x="405" y="88" text-anchor="middle" font-size="10" fill="#3c3489">X = 0, 1, 2 o 3</text>
+  <text x="405" y="104" text-anchor="middle" font-size="10" fill="#3c3489">nunca 4: solo existen 3</text>
+  <rect x="500" y="22" width="170" height="96" rx="10" fill="#faeeda" stroke="#854f0b"/>
+  <text x="585" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#633806">1.º: P = 3/8 = 0,375</text>
+  <text x="585" y="66" text-anchor="middle" font-size="10" fill="#633806">si sale uno con credenciales</text>
+  <text x="585" y="82" text-anchor="middle" font-size="10" fill="#633806">y no lo devuelvo...</text>
+  <text x="585" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#633806">2.º: P = 2/7 = 0,286</text>
+</svg>
+
+<table>
+  <tr><th>Parámetro</th><th>Qué es</th><th>Scripts (C1-6)</th><th>300 hogares (coloquio real)</th></tr>
+  <tr><td><b>N</b></td><td>Tamaño de la <b>población</b> (lote completo)</td><td>8</td><td>300</td></tr>
+  <tr><td><b>K</b></td><td><b>Éxitos que hay en la población</b></td><td>3</td><td>Propietarios entre los 300 (no lo dan, pero <b>se nombra</b>)</td></tr>
+  <tr><td><b>N − K</b></td><td><b>Fracasos</b> de la población: el resto</td><td>5</td><td>300 − K</td></tr>
+  <tr><td><b>n</b></td><td>Cuántos <b>saco</b> (muestra)</td><td>4</td><td>20</td></tr>
+  <tr><td><b>X</b></td><td>Éxitos <b>en mi muestra</b></td><td>0 a 3</td><td>Propietarios entre los 20</td></tr>
+  <tr><td><b>n/N</b></td><td>Regla del 5%</td><td>4/8 = 0,5 &gt; 0,05</td><td>20/300 ≈ 0,067 &gt; 0,05</td></tr>
+</table>
+
+<h3>Binomial vs. Hipergeométrica</h3>
+<table>
+  <tr><th></th><th>Binomial</th><th>Hipergeométrica</th></tr>
+  <tr><td>Qué te dan</td><td>Un <b>%</b> ("el 15% de los nodos...")</td><td><b>Cantidades</b> de un lote cerrado ("8 scripts, 3 con...")</td></tr>
+  <tr><td>Población</td><td>Muy grande (o no te la dan)</td><td>Chica y conocida (te dan N)</td></tr>
+  <tr><td>¿Cambia P al sacar?</td><td>No → independientes</td><td><b>Sí</b> → dependientes</td></tr>
+  <tr><td>Regla</td><td>n/N ≤ 0,05</td><td>n/N &gt; 0,05, sin reposición</td></tr>
+  <tr><td>Parámetros</td><td>n, P</td><td>N, K, n</td></tr>
+  <tr><td>Valores de X</td><td>Siempre de 0 a n</td><td>De 0 hasta el <b>menor entre n y K</b></td></tr>
+</table>
+
+<div class="box say">Pregunta real del coloquio: "Uso la Hipergeométrica porque la población es finita y conocida, N = 300 hogares, y selecciono sin reposición n = 20. Como 20/300 ≈ 0,067 es mayor que 0,05, cada hogar que saco cambia la probabilidad del siguiente. Los parámetros son N = 300, n = 20 y K = la cantidad de propietarios entre los 300. X es la cantidad de propietarios entre los 20 que elijo."</div>
+
+<div class="box warn"><b>⚠️ Tu TAI (consigna 5): trampa posible.</b> N = 330, K = 70 inquilinos, n = 15 → n/N = 15/330 ≈ <b>0,045 ≤ 0,05</b>. La Binomial también aproximaba bien. Si te preguntan por qué usaste la Hipergeométrica: <i>"Porque es el modelo exacto: la muestra es sin reposición y la población es finita. Como n/N da 0,045, la Binomial habría sido una buena aproximación."</i> Tus resultados: P(X = 4) = 0,2050 · P(X &gt; 8) = 0,0009 · P(X ≤ 6) = 0,9781.</div>
+
+<h2>7. Traductor de palabras (para leer los casos)</h2>
+<table>
+  <tr><th>Enunciado</th><th>Signo</th><th>En discretas se escribe</th></tr>
+  <tr><td>exactamente a</td><td>=</td><td>P(X = a)</td></tr>
+  <tr><td>a lo sumo / como máximo a</td><td>≤</td><td>P(X ≤ a)</td></tr>
+  <tr><td>menos de a</td><td>&lt;</td><td>P(X ≤ a − 1)</td></tr>
+  <tr><td>por lo menos / como mínimo a</td><td>≥</td><td>1 − P(X ≤ a − 1)</td></tr>
+  <tr><td>más de a</td><td>&gt;</td><td>1 − P(X ≤ a)</td></tr>
+</table>
+
+<h2>8. Mis errores a vigilar (Día 1)</h2>
+<table>
+  <tr><th>Error que cometí</th><th>Lo correcto</th></tr>
+  <tr><td>"La VA asigna un valor <b>aleatorio</b>"</td><td>Lo aleatorio es <b>el resultado</b>; el número que asigna X es fijo</td></tr>
+  <tr><td>"X es cada bloque"</td><td>X es <b>cuántos</b> éxitos hay en la muestra (un número)</td></tr>
+  <tr><td>Comparar <b>P</b> con el 5%</td><td>La regla es <b>n/N</b>. P no se compara con nada</td></tr>
+  <tr><td>"Binomial porque es finito"</td><td>Al revés: Binomial cuando la población es <b>muy grande</b></td></tr>
+  <tr><td>Dar "otros parámetros" como razón</td><td>Eso es consecuencia. La razón es: <b>población chica + sin reposición → P cambia</b></td></tr>
+  <tr><td>Olvidar nombrar K y X</td><td>Nombrarlos siempre, aunque el enunciado no dé K</td></tr>
+</table>
+
+<h2>9. Videos del Día 1 (solo los minutos útiles)</h2>
+<table>
+  <tr><th>Video de la cátedra</th><th>Minutos</th><th>Qué mirar</th></tr>
+  <tr><td>S10 · VA y distribución (youtu.be/widHBL3nnB8)</td><td>Completo (14 min)</td><td>VA, discreta/continua, cuantía, E, V, DS</td></tr>
+  <tr><td>S11 · Binomial (youtu.be/ntMW0p_vPr8)</td><td>0:00 a 6:50</td><td>Qué es el éxito; menos del 5% → independientes</td></tr>
+  <tr><td>S11 · Hipergeométrico (youtu.be/olCQZs68oAQ)</td><td>0:00 a 9:00</td><td>P cambia sin reposición; N, K, n; rango de X</td></tr>
+</table>
+
+<div class="foot">PDF Maestro · se regenera desde <code>Coloquio/PDF-Maestro/maestro.html</code> · Última actualización: lunes 23/11/2026 (cierre del Día 1).</div>
+
+</body>
+</html>
