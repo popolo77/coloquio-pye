@@ -31,6 +31,11 @@
   .pill { display:inline-block; padding: 1px 8px; border-radius: 10px; font-size: 8.8pt; font-weight:600; }
   .p-ok { background: var(--ok-bg); color: var(--ok); } .p-warn { background: var(--warn-bg); color: var(--warn); }
   svg text { font-family: "Segoe UI", Arial, sans-serif; }
+  .chk { list-style: none; padding-left: 0; margin: 4px 0 10px; }
+  .chk li { padding: 4px 0 4px 26px; position: relative; border-bottom: 1px dotted var(--line); page-break-inside: avoid; }
+  .chk li::before { content: "☐"; position: absolute; left: 2px; top: 2px; font-size: 13pt; color: var(--accent); }
+  .chk li.done::before { content: "☑"; color: var(--ok); }
+  .chk .t { color: var(--muted); font-size: 9pt; white-space: nowrap; }
   .foot { color: var(--muted); font-size: 8.8pt; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 6px; }
 </style>
 </head>
@@ -42,7 +47,7 @@
 <table class="toc">
   <tr><th>Día</th><th>Temas</th><th>Estado</th></tr>
   <tr><td>Día 1</td><td>Variable aleatoria · discreta vs. continua · distribución · <b>Binomial</b> · <b>Hipergeométrica</b></td><td><span class="pill p-ok">✅ Completo</span></td></tr>
-  <tr><td>Día 2</td><td>Poisson (consigna 7) · Normal (consigna 6)</td><td><span class="pill p-warn">En curso</span></td></tr>
+  <tr><td>Día 2</td><td>Poisson (consigna 7) · Normal (consigna 6)</td><td><span class="pill p-warn">En curso · teoría lista</span></td></tr>
   <tr><td>Día 3</td><td>Inferencia · muestra y sesgo · parámetro vs. estadístico · estimadores · muestreo</td><td>Pendiente</td></tr>
   <tr><td>Día 4</td><td>Error muestral · TLC · intervalos de confianza (95%) · consigna 8</td><td>Pendiente</td></tr>
   <tr><td>Día 5</td><td>Simulacros completos</td><td>Pendiente</td></tr>
@@ -51,6 +56,34 @@
 <h2>🔑 La fórmula para responder cualquier pregunta</h2>
 <div class="box key"><b>1. QUÉ</b> es o qué modelo uso → <b>2. POR QUÉ</b> (las condiciones que lo justifican, con la cuenta si hay) → <b>3. QUÉ SIGNIFICA</b> (interpretación o decisión).<br>
 En la U3 casi siempre te leen <b>un caso</b> y tenés que decir: <b>X · éxito · modelo y por qué · parámetros</b>. <b>No piden cuentas.</b></div>
+
+<h2>✅ Mi lista de tareas</h2>
+<h3>Día 1 · Cierre</h3>
+<ul class="chk">
+  <li class="done">Videos S10, S11 Binomial (0:00 a 6:50) y S11 Hipergeométrico (0:00 a 9:00) <span class="t">hecho</span></li>
+  <li class="done">Preguntas de comprensión: VA, Binomial, Hipergeométrica y la de los 300 hogares <span class="t">hecho</span></li>
+  <li>Releer las secciones 5 y 6 de este PDF (Binomial e Hipergeométrica) y decir en voz alta los recuadros 🗣️ <span class="t">10 min</span></li>
+  <li>Repaso en formato coloquio (casos de la cátedra, uno por turno): C1-1 a C1-6 · C2-1, C2-2, C2-4 · C3-1 a C3-4 <span class="t">20 min</span></li>
+</ul>
+
+<h3>Día 2 · Poisson y Normal (hoy)</h3>
+<ul class="chk">
+  <li>🎥 <b>Video Poisson</b> (S11 video 3, youtu.be/nNhow4oKJsQ): ver <b>0:00 a 1:30</b> (qué cuenta X y ejemplos) y <b>2:33 a 6:00</b> (cómo se reescala λ). <b>Saltear</b> la fórmula (1:30 a 2:30) y las tablas (desde 6:42) <span class="t">~8 min</span></li>
+  <li>📖 Leer en este PDF la sección 10 (Poisson) <span class="t">5 min</span></li>
+  <li>🎥 <b>Video Normal 1</b> (S12, youtu.be/b4udD8N2FYs): ver <b>0:00 a 5:30</b> (qué es, μ y σ, forma de campana), <b>6:27 a 10:30</b> (probabilidad = área; &lt; y ≤ dan igual) y <b>11:12 a 13:00</b> (variable normal estándar Z). <span class="t">~15 min</span></li>
+  <li>🎥 <b>Video Normal 2</b> (S12, youtu.be/VgB9aFbR6a4): solo <b>0:00 a 3:00</b> (cómo cambia el signo: menor, máximo, mayor, entre). El resto es el comando de R: <b>saltear</b> <span class="t">3 min</span></li>
+  <li>📖 Leer la sección 11 (Normal) y la 12 (comparación de los 4 modelos) <span class="t">8 min</span></li>
+  <li>🗣️ Responder en voz alta las 3 preguntas tipo Daniela de cada modelo (recuadros 🗣️) <span class="t">10 min</span></li>
+  <li>✏️ Casos del repaso (solo modelo y parámetros, sin cuentas): <b>Poisson</b> C2-5, C2-6, C3-5, C3-6 · <b>Normal</b> C2-3, C3-7, C3-8 <span class="t">20 min</span></li>
+  <li>🧩 Caso mezclado: te leo uno y decidís el modelo entre los 4 (sin avisar cuál es) <span class="t">10 min</span></li>
+</ul>
+
+<h3>Días siguientes (resumen)</h3>
+<ul class="chk">
+  <li><b>Día 3:</b> videos ¿Qué es la inferencia? (youtu.be/M7Q7E8no6SI) y Estimadores (youtu.be/aVAoItA1ci8) → descriptiva vs. inferencial, muestra y sesgo, parámetro vs. estadístico, muestreo simple y sistemático</li>
+  <li><b>Día 4:</b> videos Distribuciones muestrales, TLC, Construcción e Interpretación de IC y Tutorial consigna 8 → error muestral, TLC, IC 95%, consigna 8</li>
+  <li><b>Día 5:</b> dos simulacros de 4 preguntas (2 de U3 y 2 de U4) → arreglar puntos flojos → armar el machete</li>
+</ul>
 
 <!-- ======================= DÍA 1 ======================= -->
 <div class="day">DÍA 1 · Variable aleatoria, Binomial e Hipergeométrica</div>
@@ -220,7 +253,124 @@ X(resultado)                       # por eso no sé de antemano cuánto vale X</
   <tr><td>S11 · Hipergeométrico (youtu.be/olCQZs68oAQ)</td><td>0:00 a 9:00</td><td>P cambia sin reposición; N, K, n; rango de X</td></tr>
 </table>
 
-<div class="foot">PDF Maestro · se regenera desde <code>Coloquio/PDF-Maestro/maestro.html</code> · Última actualización: lunes 23/11/2026 (cierre del Día 1).</div>
+<!-- ======================= DÍA 2 ======================= -->
+<div class="day pb">DÍA 2 · Poisson y Normal</div>
+<div class="sub">Fuentes: apunte de la cátedra S11 (Hipergeométrico-Poisson), apunte S12 (Normal), repaso S15, consignas 6 y 7 del TAI, videos de la cátedra S11 video 3 y S12 videos 1 y 2. <b>Teoría lista; falta practicar con los casos.</b></div>
+
+<h2>10. Modelo de Poisson</h2>
+<p><b>Idea:</b> contás <b>cuántos sucesos ocurren en un intervalo</b> (de tiempo, espacio o distancia), cuando ocurren <b>de forma independiente</b> y a una <b>tasa promedio constante</b>. <b>No hay "n pruebas": hay un intervalo.</b></p>
+
+<table>
+  <tr><th>Qué</th><th>Poisson</th></tr>
+  <tr><td><b>X</b></td><td>Cantidad de sucesos en el intervalo que preguntan (formularios en 15 min, errores 500 por hora, bugs por día)</td></tr>
+  <tr><td><b>Parámetro</b></td><td><b>λ (lambda)</b> = cantidad <b>promedio</b> de sucesos <b>en el intervalo de la pregunta</b></td></tr>
+  <tr><td><b>Valores de X</b></td><td>0, 1, 2, 3... <b>sin máximo</b> (es discreta e infinita)</td></tr>
+  <tr><td><b>Ejemplos de la cátedra</b></td><td>Llamadas a un centro de atención en media hora · tickets en 2 horas · fallas por km de fibra · bits corruptos por cada 10.000 m de cable</td></tr>
+</table>
+
+<h3>🔑 Reescalar λ (la trampa de la cátedra)</h3>
+<p>λ tiene que estar <b>en el mismo intervalo que la pregunta</b>. Regla de tres: tasa × (intervalo pedido ÷ intervalo del dato).</p>
+<table>
+  <tr><th>Caso (aula)</th><th>Dato</th><th>Pregunta</th><th>λ para la pregunta</th></tr>
+  <tr><td>C2-5 · errores HTTP 500</td><td>4 por hora</td><td>en 15 min</td><td><b>λ = 1</b></td></tr>
+  <tr><td>C2-6 · bugs de Safari</td><td>2,5 por día</td><td>en 2 días</td><td><b>λ = 5</b></td></tr>
+  <tr><td>C3-5 · errores de lectura del disco</td><td>0,8 por hora</td><td>en 15 min</td><td><b>λ = 0,2</b></td></tr>
+  <tr><td>C3-6 · errores en 3 días</td><td>6 en 3 días (= 2 por día)</td><td>en 5 días</td><td><b>λ = 10</b></td></tr>
+  <tr><td>Coloquio real · formularios</td><td>12 por hora</td><td>en 15 min</td><td><b>λ = 3</b></td></tr>
+</table>
+
+<h3>Poisson vs. Binomial (no mezclarlas)</h3>
+<table>
+  <tr><th></th><th>Binomial</th><th>Poisson</th></tr>
+  <tr><td>Qué contás</td><td><b>Éxitos</b> en <b>n pruebas</b></td><td><b>Sucesos</b> en un <b>intervalo</b></td></tr>
+  <tr><td>¿Hay un n?</td><td>Sí, lo sabés (cuántas pruebas hiciste)</td><td><b>No</b>: no hay "intentos", hay tiempo o espacio</td></tr>
+  <tr><td>Parámetros</td><td>n y P</td><td>λ (un solo parámetro)</td></tr>
+  <tr><td>Máximo de X</td><td>n</td><td>No tiene</td></tr>
+</table>
+
+<div class="box say">Caso C2-5: "El servidor recibe en promedio 4 errores HTTP 500 por hora y piden la probabilidad en 15 minutos. Uso Poisson porque cuento sucesos en un intervalo, no hay una cantidad fija de pruebas, y los errores ocurren de forma independiente con una tasa promedio. X es la cantidad de errores en 15 minutos. Tengo que reescalar: 15 minutos es un cuarto de hora, entonces λ = 1. Pide entre 2 y 5, ambos inclusive, o sea P(2 ≤ X ≤ 5)."</div>
+<div class="box warn"><b>Preguntas reales que ya hicieron:</b> "¿Cuál es el símbolo del parámetro?" → <b>λ</b>. "¿Cómo se escribe recibir 4 formularios?" → <b>P(X = 4)</b>. "¿Y si cambia el intervalo?" → <b>reescalo λ</b>.</div>
+<p><b>Tu consigna 7 (TAI):</b> 12 formularios por hora. 7.1 exactamente 4 en 15 min (λ = 3): 0,1680 · 7.2 como máximo 5 en 30 min (λ = 6): 0,4457 · 7.3 menos de 7 en 45 min (λ = 9): 0,2068. <i>Decisión en sistemas:</i> con λ = 9 hay solo un 21% de recibir menos de 7 formularios en 45 min, así que dimensionar para 6 dejaría corto el servidor casi el 80% de las veces.</p>
+
+<h2>11. Modelo Normal ⭐</h2>
+<p><b>Idea:</b> es el modelo para variables <b>continuas</b> (que <b>miden</b>) con forma de <b>campana</b>: la mayoría de los valores está cerca del promedio y cuanto más te alejás, menos frecuentes son.</p>
+
+<svg viewBox="0 0 680 190" width="100%" style="page-break-inside:avoid">
+  <path d="M40 160 C170 160 230 30 340 30 C450 30 510 160 640 160 Z" fill="#e1f5ee" stroke="#0f6e56" stroke-width="2"/>
+  <path d="M340 30 V160" stroke="#5b6270" stroke-dasharray="4 3"/>
+  <path d="M40 160 H640" stroke="#5b6270"/>
+  <text x="340" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">pico en μ (el centro)</text>
+  <text x="340" y="178" text-anchor="middle" font-size="11" fill="#5b6270">μ</text>
+  <text x="200" y="178" text-anchor="middle" font-size="11" fill="#5b6270">μ − σ</text>
+  <text x="480" y="178" text-anchor="middle" font-size="11" fill="#5b6270">μ + σ</text>
+  <text x="560" y="100" font-size="11" fill="#085041">más lejos de μ =</text><text x="560" y="115" font-size="11" fill="#085041">menos probable</text>
+  <text x="70" y="100" font-size="11" fill="#085041">simétrica: la mitad</text><text x="70" y="115" font-size="11" fill="#085041">a cada lado de μ</text>
+</svg>
+
+<table>
+  <tr><th>Parámetro</th><th>Qué es</th><th>Qué hace en el gráfico</th></tr>
+  <tr><td><b>μ</b> (media)</td><td>El <b>centro</b></td><td><b>Mueve</b> la campana a izquierda o derecha. Ahí está el pico</td></tr>
+  <tr><td><b>σ</b> (desviación)</td><td>La <b>dispersión</b></td><td>σ grande → campana <b>más ancha y baja</b> · σ chica → <b>más angosta y alta</b></td></tr>
+</table>
+
+<h3>Lo que hay que saber (cátedra)</h3>
+<ul>
+  <li><b>La probabilidad es un área</b> bajo la curva. El área total vale 1.</li>
+  <li><b>P(X = un valor exacto) = 0</b> (variable continua). Por eso en la Normal <b>"menos de" y "a lo sumo" dan lo mismo</b>: &lt; y ≤ no se distinguen.</li>
+  <li><b>X puede tomar cualquier valor real</b> (no solo enteros).</li>
+  <li>Se usa con variables que <b>miden</b> y tienen forma de campana: tiempos, latencias, ingresos, tamaños. Se escribe X ~ N(μ, σ).</li>
+</ul>
+
+<h3>¿Qué lado de la campana me piden?</h3>
+<table>
+  <tr><th>Enunciado</th><th>Lado</th><th>Se escribe</th><th>Caso del aula</th></tr>
+  <tr><td>menos de · a lo sumo · como máximo</td><td><b>Izquierda</b></td><td>P(X ≤ a)</td><td>C2-3: tarda como máximo 52 ms (μ = 45, σ = 5)</td></tr>
+  <tr><td>más de · por lo menos · como mínimo</td><td><b>Derecha</b></td><td>1 − P(X ≤ a)</td><td>C3-8: respuesta de al menos 9,5 ms (μ = 10, σ = 1)</td></tr>
+  <tr><td>entre a y b</td><td><b>El medio</b></td><td>P(X ≤ b) − P(X ≤ a)</td><td>C3-7: latencia entre 78 y 84 ms (μ = 80, σ = 10)</td></tr>
+</table>
+
+<h3>Estandarización Z</h3>
+<div class="box key"><b>Z = (X − μ) / σ</b> → dice <b>cuántas desviaciones estándar</b> está X por encima (+) o por debajo (−) de la media. La normal estándar tiene μ = 0 y σ = 1. <b>En el denominador va σ.</b><br>
+Ejemplo C2-3: 52 ms está (52 − 45) / 5 = <b>1,4 desviaciones por encima</b> de la media.</div>
+<p><b>¿Por qué estandarizar?</b> Hay infinitas normales (una por cada μ y σ). Pasando todo a Z se usa <b>una sola tabla</b> para cualquiera.</p>
+
+<div class="box say">Caso C3-7: "La latencia entre servidores es una variable continua, mide milisegundos, y tiene forma de campana, así que uso la Normal con μ = 80 y σ = 10. X es la latencia en ms. Como piden entre 78 y 84, tomo el área del medio: la probabilidad de ser menor que 84 menos la de ser menor que 78. Como X es continua, no importa si es menor o menor o igual."</div>
+<div class="box say">Pregunta real: "ITF mayor a 350.000: ¿qué forma tiene, cuál es el centro y qué lado tomás?" → "Tiene forma de campana, simétrica. El centro es μ, la media del ITF. Piden mayor que, así que tomo el lado derecho: 1 menos la probabilidad de ser menor o igual a 350.000."</div>
+<div class="box warn"><b>Criterio crítico (suma puntos): ¿la Normal es buen modelo para el ITF?</b> En tu TAI μ ≈ $1.388.220 y σ ≈ $1.147.315. σ es casi tan grande como μ, y la Normal le daría ~11% de probabilidad a ingresos <b>negativos</b>, que no existen. El ITF real es <b>asimétrico</b> (muchos hogares de ingreso medio y pocos de ingreso muy alto), así que la Normal es <b>una aproximación</b>.</div>
+<p><b>Tu consigna 6 (TAI):</b> 6.1 ITF de por lo menos $350.000 → derecha → 0,8172 (el 82% de los hogares supera esa cifra) · 6.2 entre $250.000 y $300.000 → el medio → 0,0109 (franja muy angosta: ~1%) · 6.3 menor que $450.000 → izquierda → 0,2067 (1 de cada 5 hogares).</p>
+
+<h2>12. Los 4 modelos juntos (mapa final de la U3)</h2>
+<table>
+  <tr><th></th><th>Binomial</th><th>Hipergeométrica</th><th>Poisson</th><th>Normal</th></tr>
+  <tr><td><b>X hace</b></td><td>Cuenta éxitos en n pruebas</td><td>Cuenta éxitos en n sin reposición</td><td>Cuenta sucesos en un intervalo</td><td><b>Mide</b></td></tr>
+  <tr><td><b>Tipo</b></td><td>Discreta</td><td>Discreta</td><td>Discreta</td><td>Continua</td></tr>
+  <tr><td><b>Parámetros</b></td><td>n, P</td><td>N, K, n</td><td>λ</td><td>μ, σ</td></tr>
+  <tr><td><b>Valores de X</b></td><td>0 a n</td><td>0 a mín(n, K)</td><td>0, 1, 2...</td><td>Cualquier real</td></tr>
+  <tr><td><b>Pista del enunciado</b></td><td>Un % sin dar N</td><td>Lote chico con cantidades</td><td>"En promedio... por hora/día"</td><td>"Distribuye normalmente, media y desviación"</td></tr>
+  <tr><td><b>Trampa</b></td><td>Éxito = lo que estudio</td><td>n/N &gt; 0,05</td><td>Reescalar λ</td><td>&lt; y ≤ son iguales</td></tr>
+</table>
+
+<h2>13. Errores a vigilar en el Día 2 (de la Biblia; los míos se anotan al practicar)</h2>
+<table>
+  <tr><th>Error típico</th><th>Lo correcto</th></tr>
+  <tr><td>Usar el λ del enunciado sin reescalar</td><td>Convertir al intervalo de la pregunta (4 por hora → 1 en 15 min)</td></tr>
+  <tr><td>Decir "n" en Poisson</td><td>No hay n: hay un intervalo. El único parámetro es λ</td></tr>
+  <tr><td>Decir que Poisson es continua "porque no tiene tope"</td><td>Es <b>discreta</b>: cuenta. Que no tenga máximo no la hace continua</td></tr>
+  <tr><td>Pedir P(X = valor) en la Normal</td><td>Vale 0. Se calculan áreas entre dos valores o de un lado</td></tr>
+  <tr><td>Confundir qué lado tomar</td><td>"menos / máximo" = izquierda · "más / mínimo" = derecha · "entre" = el medio</td></tr>
+  <tr><td>Olvidar σ en el denominador de Z</td><td>Z = (X − μ) / σ</td></tr>
+</table>
+
+<h2>14. Videos del Día 2 (solo los minutos útiles)</h2>
+<table>
+  <tr><th>Video de la cátedra</th><th>Minutos</th><th>Qué mirar</th><th>Saltear</th></tr>
+  <tr><td>S11 · Poisson (youtu.be/nNhow4oKJsQ)</td><td>0:00 a 1:30 y 2:33 a 6:00</td><td>Qué cuenta X, ejemplos, cómo se reescala λ con el caso del servidor</td><td>Fórmula (1:30 a 2:30) y tablas (desde 6:42)</td></tr>
+  <tr><td>S12 · Normal 1 (youtu.be/b4udD8N2FYs)</td><td>0:00 a 5:30 · 6:27 a 10:30 · 11:12 a 13:00</td><td>μ y σ, campana, probabilidad = área, &lt; y ≤ iguales, variable estándar Z</td><td>Cuentas con la integral</td></tr>
+  <tr><td>S12 · Normal 2 (youtu.be/VgB9aFbR6a4)</td><td>0:00 a 3:00</td><td>Cómo cambia el planteo según el signo</td><td>Todo el uso de R (pnorm)</td></tr>
+  <tr><td>S12 · Ejercicio Normal (youtu.be/z3RYtIz4qQw)</td><td><i>No revisado</i></td><td>Opcional: ejercicio completo con cuentas</td><td>—</td></tr>
+</table>
+
+<div class="foot">PDF Maestro · se regenera desde <code>Coloquio/PDF-Maestro/maestro.html</code> · Última actualización: martes 24/11/2026 (teoría del Día 2: Poisson y Normal, más lista de tareas).</div>
 
 </body>
 </html>

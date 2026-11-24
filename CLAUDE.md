@@ -23,6 +23,7 @@
 - **Se volvió a la versión de esta PC.** Lo que había subido la otra PC el 20/11 (bitácora en `Coloquio/sesiones/`) se descartó, pero queda en el historial de Git.
 - **Se creó `BIBLIA-COLOQUIO.md`** (22/11): el documento maestro.
 - **Próximo paso exacto (23/11):** DÍA 1 COMPLETO ✅. Sigue el **Día 2: Poisson** ([video S11](https://youtu.be/nNhow4oKJsQ), revisar la transcripción para dar los minutos) **y Normal** (videos S12). Casos del banco: C2-5, C2-6, C3-5, C3-6 (Poisson); C2-3, C3-7, C3-8 (Normal).
+- **Actualización 24/11:** el PDF Maestro ya tiene la teoría del Día 2 (Poisson y Normal, secciones 10 a 14) y una **lista de tareas** con minutos de video. Minutos revisados por transcripción: Poisson S11 = ver 0:00-1:30 y 2:33-6:00 (saltear fórmula y tablas); Normal 1 S12 = 0:00-5:30, 6:27-10:30, 11:12-13:00; Normal 2 S12 = solo 0:00-3:00 (el resto es R); Ejercicio Normal (z3RYtIz4qQw) sin revisar. **Próximo:** el usuario lee el PDF en el trabajo, ve los videos y después practicar casos de repaso: Día 1 (C1 1-6, C2 1/2/4, C3 1-4) y Día 2 (C2-5, C2-6, C3-5, C3-6, C2-3, C3-7, C3-8), uno por turno, sin cuentas.
 - *(Anterior:)* ver la última fila de la bitácora. Hoy (dom 22): videos [Binomial S11](https://youtu.be/ntMW0p_vPr8) y [Hipergeométrico S11](https://youtu.be/olCQZs68oAQ), y después 3 preguntas tipo Daniela.
 - *(Plan anterior, reemplazado por el método piloteo:)* Día 1 = Biblia, caps. 1, 2 y 3.
   1. Ver el video de la cátedra [S10 · VA y distribución de probabilidades](https://youtu.be/widHBL3nnB8).
